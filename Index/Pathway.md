@@ -9,8 +9,10 @@ Suitable for individuals new to the field or those seeking to refine their exist
 Upon completion, you will have established a robust foundation in cybersecurity, equipping you with the knowledge and expertise necessary to tackle advanced challenges and real-world situations.
 
 ---
+## Level 0 - Tutorial
+- [ ] [Tutorial](https://tryhackme.com/room/tutorial)
 
-## Level 1 - Intro
+## Level 1 - Introduction
 - [ ] [Tutorial](https://tryhackme.com/room/tutorial)
 - [ ] [OpenVPN](https://tryhackme.com/room/openvpn)
 - [ ] [Welcome](https://tryhackme.com/jr/welcome) (write-up [here](www.google.com))
