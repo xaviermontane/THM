@@ -13,7 +13,7 @@ Upon completion, you will have established a robust foundation in cybersecurity,
 - [ ] [Welcome](https://tryhackme.com/jr/welcome) (write-up [here](https://github.com/xaviermontane/THM/blob/main/Writeups/00-Tutorial/Welcome.md))
 
 ## Level 1 - Introduction
-- [ ] [OpenVPN](https://tryhackme.com/room/openvpn)
+- [x] [OpenVPN](https://tryhackme.com/room/openvpn)
 - [ ] [Starting Out In Cyber Sec](https://tryhackme.com/room/startingoutincybersec)
 - [ ] [Intro to Researching](https://tryhackme.com/room/introtoresearch)
 - [ ] [Google Dorking](https://tryhackme.com/room/googledorking)
