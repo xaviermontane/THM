@@ -13,7 +13,6 @@ Upon completion, you will have established a robust foundation in cybersecurity,
 - [ ] [Tutorial](https://tryhackme.com/room/tutorial)
 
 ## Level 1 - Introduction
-- [ ] [Tutorial](https://tryhackme.com/room/tutorial)
 - [ ] [OpenVPN](https://tryhackme.com/room/openvpn)
 - [ ] [Welcome](https://tryhackme.com/jr/welcome) (write-up [here](www.google.com))
 - [ ] [Starting Out In Cyber Sec](https://tryhackme.com/room/startingoutincybersec)
