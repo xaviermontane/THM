@@ -50,8 +50,58 @@ Aside from the search engines who provide these "Crawlers", website/web-server o
 
 #### Robots.txt
 
-This file is the first one to get indexed when crawling a website. This file must be served at the root directory - specified by the webserver itself. The text file defines the permissions the "Crawler" has to the website. For example, what type of "Crawler" is allowed (I.e. You only want Google's "Crawler" to index your site and not MSN's). Moreover, Robots.txt can specify what files and directories that we do or don't want to be indexed by the "Crawler".
+When crawling a website, this is the first file that is indexed. This file must be served from the webserver's default root directory. The text file specifies the _Crawler's_ access to the webpage. For example, what kind of _Crawler_ is permitted (You might only want Google's _Crawler_ to index your site, not MSN's). Furthermore, Robots.txt allows us to designate which files and folders we want or don't want the _Crawler_ to index.
 
-—— Click [here] to see a basic markup of robots.txt.
+**Click [here](www.youtube.com/robots.txt) to view YouTube's own Robots.txt file —** To view a website's Robots.txt file just type in `www.website.com/robots.txt`
 
+A very basic markup of a Robots.txt looks like this:
 
+```
+User-agent: *
+Allow: /
+
+Sitemap: http://mywebsite.com/sitemap.xml
+```
+
+Let's take a look at the syntax:
+<br>
+
+|  Keyword  | Function |
+| --------- | -------- |
+| User-agent | Specify the type of _crawler_ that can index your site (the asterisk being a wildcard, allowing all "User-agents" |
+| Allow | Specify the directories/file(s) that the _crawler_ can index |
+| Disallow | Specify the directories/file(s) that the _crawler_ cannot index |
+| Sitemap  | Provide a reference to where the sitemap is located (improves SEO) |
+
+#### Permissions
+Robots.txt works on a "blacklisting" basis, meaning unless told otherwise, the _crawler_ will index whatever it can find. With this knowledge, let's now try to hide directories or files from a _crawler_. 
+
+```
+User-agent: *
+Disallow: /secret-directory/
+Disallow: /not-a-secret/but-this-is/
+
+Sitemap: http://mywebsite.com/sitemap.xml
+```
+
+To allow certain crawlers to index the site, we must use the following syntax:
+
+```
+User-agent: Googlebot
+Allow: /
+
+User-aget: msnbot
+Disallow: /
+```
+
+Now let's prevent certain files from being indexed:
+
+```
+User-agent: *
+Disallow: /*.ini$
+Sitemap: http://mywebsite.com/sitemap.xml
+```
+
+In this example, any _crawler_ can index the site, however, they cannot index any file (*) that has the extension of .ini within any directory/sub-directory using ("$") of the site. But why would you want to hide a .ini file? Well, files like this contain sensitive configuration details. By aplying changes like this we can protect our site against any maling actors.
+
+#### Sitemaps
