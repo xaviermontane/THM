@@ -1,48 +1,57 @@
 ### Google Dorking
 
-Google... Regardless of your expertise you're knowledgable of the name, this search engine has stood the test of time. As a matter of fact, Google has 4.3 billion users worldwide, making it the most dominant search engine on the internet.
-Researching as a whole, especially in the context of cybersecurity, encapsulates almost everything you do as a pentester. "Search Engines" such as Google are huge indexers, more specifically indexers of content spread across the World Wide Web. These essentials for surfing the internet use “Crawlers” or “Spiders” to search for this content across the web.
+Regardless of your technological proficiency chances are you've heard of the name Google. This search engine has stood the test of time and as a matter of fact, Google has 4.3 billion users worldwide, making it the most dominant search engine on the internet.
+Research as a whole, especially in the context of cybersecurity, covers pretty much everything you do as a penetration tester. "Search Engines" such as Google are huge indexers, more specifically indexers of content spread across the World Wide Web. These essentials for surfing the internet use “Crawlers” or “Spiders” to search for this content across the web.
 
 #### Crawlers
 
-Crawlers discover content through various means. One being pure discovery, where a URL is visited by the crawler and information regarding the content type of the website is returned to the search engine. In fact, there is lots of information modern crawlers scrape, but we will discuss how this is used later. Another method crawlers use to discover content is by following any and all URLs found on previously crawled websites. Much like a virus in the sense that it will want to traverse or spread to everything it can.
+Crawlers aim at discovering content through various means. One of them being pure discovery, in which the crawler visits a URL and returns information about the website's content type to the search engine. In truth, current crawlers scrape a lot of data, but we'll get into how this is used later. Crawlers can also uncover material by tracking any and all URLs found on previously crawled websites. It will seek to traverse or spread to whatever it can, much like a virus.
 
+The graphic below is a high-level representation of how various web crawlers function. When a web crawler detects a domain like **mywebsite.com**, it will index the full contents of the domain, looking for keywords and other extraneous information.
 
+![image](https://github.com/xaviermontane/THM/assets/101309588/428bc5bf-b67c-45b5-aba7-96d4bd6e14e7)
 
-The diagram below is a high-level abstraction of how these web crawlers work. Once a web crawler discovers a domain such as **mywebsite.com**, it will index the entire contents of the domain, looking for keywords and other miscellaneous information - but I will discuss this miscellaneous information later.
+"**mywebsite.com**" has been scraped as having the keywords "Apple," "Banana," and "Pear". The crawler stores these keywords in a dictionary and subsequently returns them to the search engine, such as Google. The search engine now knows that the domain "**mywebsite.com**" contains the keywords "Apple", "Banana", and "Pear". Since only one website has been crawled, a user searching for "Apple" would get the result "**mywebsite.com**". This would produce the same results if the user searched for "Banana."
 
-![[Pasted image 20230912222244.png]]
+As shown below, a user enters a search query for "Pears" into a search engine. Because the search engine only knows the contents of one website that has been crawled with the keyword "Pears," it will present the user with the single domain.
 
-In the diagram above, "**mywebsite.com**" has been scraped as having the keywords as “Apple” “Banana" and “Pear”. These keywords are stored in a dictionary by the crawler, who then returns these to the search engine i.e. Google. Because of this persistence, Google now knows that the domain “**mywebsite.com**” has the keywords “Apple", “Banana” and “Pear”. As only one website has been crawled, if a user was to search for “Apple”...“**mywebsite.com**” would appear. This would result in the same behaviour if the user was to search for “Banana”. As the indexed contents from the crawler report the domain as having “Banana”, it will be displayed to the user.
+![image](https://github.com/xaviermontane/THM/assets/101309588/ec7a4946-050a-4849-87d1-3bc632e8e03e)
 
-As illustrated below, a user submits a query to the search engine of “Pears". Because the search engine only has the contents of one website that has been crawled with the keyword of “Pears” it will be the only domain that is presented to the user.
+However, as previously stated, **crawlers attempt to crawl, or traverse, every URL and file that they can find!** If "**mywebsite.com**" contained the same keywords as before ("Apple", "Banana", and "Pear"), but also a URL to another website "**anotherwebsite.com**", the crawler will attempt to traverse everything on that URL (**anotherwebsite.com**) and retrieve the contents of everything within that domain.
 
-![[Pasted image 20230912222351.png]]
+The graphic below illustrates this. The crawler first finds "**mywebsite.com**," where it explores the website's contents, discovering the same keywords ("Apple," "Banana," and "Pear") as before, but it has now discovered an external URL. Once the crawler has finished on "**mywebsite.com**," it will proceed to crawl the contents of the website "**anotherwebsite.com**," which contains the keywords ("Tomatoes," "Strawberries," and "Pineapples"). The crawler's dictionary now includes the contents of both "**mywebsite.com**" and "**anotherwebsite.com**", which is then stored and kept within the search engine.
 
-However, as we previously mentioned, **crawlers attempt to traverse, termed as crawling, every URL and file that they can find!** Say if “**mywebsite.com**” had the same keywords as before (“Apple", “Banana” and “Pear”), but also had a URL to another website “**anotherwebsite.com**”, the crawler will then attempt to traverse everything on that URL (**anotherwebsite.com**) and retrieve the contents of everything within that domain respectively.
+![image](https://github.com/xaviermontane/THM/assets/101309588/f0784eae-4947-40b7-9308-aa3e737c7eb4)
 
-This is illustrated in the diagram below. The crawler initially finds “**mywebsite.com**”, where it crawls the contents of the website - finding the same keywords (“Apple", “Banana” and “Pear”) as before, but it has additionally found an external URL. Once the crawler is complete on “**mywebsite.com**”, it'll proceed to crawl the contents of the website “**anotherwebsite.com**”, where the keywords ("Tomatoes", “Strawberries” and “Pineapples”) are found on it. The crawler's dictionary now contains the contents of both “**mywebsite.com**” and “**anotherwebsite.com**”, which is then stored and saved within the search engine.
-
-![[Pasted image 20230912222506.png]]
-
-**So to recap, the search engine now has knowledge of two domains that have been crawled:  **
-1. mywebsite.com  
-2. anotherwebsite.com
-
-Although note that “**anotherwebsite.com**” was only crawled because it was referenced by the first domain “**mywebsite.com**”. Or as illustrated below:
-
-![[Pasted image 20230912222556.png]]
+So now our search engine has managed to retrieve keywords through the help of crawlers, this is how our search queries operate.  This is fantastic! But what if a website had many external URLs (as they frequently do!)? That will necessitate a lot of crawling. There's always the possibility that another website will have similar information to the one that was crawled, right? So, how does the "Search Engine" determine the hierarchy of domains displayed to the user?
 
 Imagine if a website had multiple external URL's (as they often do!) That'll require a lot of crawling to take place. There's always the chance that another website might have similar information as of that another website crawled - right? So how does the "Search Engine" decide on the hierarchy of the domains that are displayed to the user?
 
-In the diagram below in this instance, if the user was to search for a keyword such as "Tomatoes" (which websites 1-3 contain) who decides what website gets displayed in what order?
+In the diagram below in this instance, if the user was to search for a keyword such as "Tomatoes" (which websites 1-3 contain) who decides what website gets displayed in what order? To understand this we will then have to take a look into _Search Engine Optimisation_.
 
-![[Pasted image 20230912222652.png]]
+---
 
-**Review Questions**
-- Name the key term of what a "Crawler" is used to do:
-	- Index
-- What is the name of the technique that "Search Engines" use to retrieve this information about websites?
-	- Crawling
-- What is an example of the type of contents that could be gathered from a website?
-	- Keywords
+#### Search Engine Optimisation (SEO)
+
+Search Engine Optimisation, or SEO, is a popular and profitable topic among today's search engines. Indeed, enhancing a domain's SEO "ranking" is so important that entire businesses are built around it. In general, search engines will "prioritise" domains that are easier to index. Many factors influence how "optimal" a domain is, culminating in something akin to a point-scoring system.
+
+Some factors that influence this scoring system include the following:
+- How responsive your website is to the different browser types I.e. Google Chrome, Firefox and Internet Explorer - this includes Mobile phones too!
+- How easy it is to crawl your website (or if crawling is even allowed) through the use of "Sitemaps"
+- What kind of keywords your website has (i.e. In our examples if the user was to search for a query like “Colours” no domain will be returned - as the search engine has not (yet) crawled a domain that has any keywords to do with “Colours”
+
+There are various online tools - sometimes provided by the search engine providers themselves that will show you just how optimised your domain is. For example, let's use [Google's Site Analyser]([https://web.dev/](https://pagespeed.web.dev/)) to check the rating of [TryHackMe](tryhackme.com):
+
+<img width="955" alt="Screenshot 2023-09-17 at 12 38 35" src="https://github.com/xaviermontane/THM/assets/101309588/8a6a9441-e3ec-4a52-8bf3-7a32ac8caec9">
+
+#### How Are Crawlers Regulated?
+
+Aside from the search engines who provide these "Crawlers", website/web-server owners themselves ultimately stipulate what content "Crawlers" can scrape. Search engines will want to retrieve everything from a website - but there are a few cases where we wouldn't want all of the contents of our website to be indexed!
+
+#### Robots.txt
+
+This file is the first one to get indexed when crawling a website. This file must be served at the root directory - specified by the webserver itself. The text file defines the permissions the "Crawler" has to the website. For example, what type of "Crawler" is allowed (I.e. You only want Google's "Crawler" to index your site and not MSN's). Moreover, Robots.txt can specify what files and directories that we do or don't want to be indexed by the "Crawler".
+
+—— Click [here] to see a basic markup of robots.txt.
+
+
