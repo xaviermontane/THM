@@ -105,3 +105,33 @@ Sitemap: http://mywebsite.com/sitemap.xml
 In this example, any _crawler_ can index the site, however, they cannot index any file (*) that has the extension of .ini within any directory/sub-directory using ("$") of the site. But why would you want to hide a .ini file? Well, files like this contain sensitive configuration details. By aplying changes like this we can protect our site against any maling actors.
 
 #### Sitemaps
+
+Just like its name suggest, _sitemaps_ are the maps used by websites. These _sitemaps_ play a major role in the functioning of crawlers, as they specifiy the adequate routes to find content within the domain. 
+
+Below you can find an illustration of the structure of a website, and how it may look on a _sitemap_.
+
+![image](https://github.com/xaviermontane/THM/assets/101309588/c4fe3902-a603-4d85-af27-2369d1ed0d2b)
+
+However, this is just a simplified representation of _sitemaps_ for the sake of understanding, real sitemaps look like the following:
+
+![image](https://github.com/xaviermontane/THM/assets/101309588/80c654cd-9ab2-458b-acc8-2c8a13777c98)
+
+_Sitemaps_ are Extensible Markup Language (XML) formatted, this is a type of markup language and file format for storing, transmitting, and reconstructing arbitrary data.
+
+The implementation of _sitemaps_ have a significant impact on a website's "optimisation" and favorability. As we discussed earlier in our Search Engine Optimisation (SEO) section, these maps make content traversal significantly easier for crawlers!
+
+**But what makes _sitemaps_ so favourable for search engines?**
+
+Search engines have a lot of data to process. Therefore, the efficiency of how this data is collected is paramount. Crawlers benefit greatly from resources such as _sitemaps_ because the essential routes for content are already supplied! Rather than going through the process of manually locating and scraping, the crawler only needs to scrape certain content. — Consider it similar to utilising a wordlist to find files rather than guessing their names at random.
+
+_**The easier a website is to crawl, the more optimised it is for the Search Engine**_
+
+#### Google's Advanced Searching
+
+As previously discussed, Google has a lot of websites crawled and indexed. Most people utilize Google to browse enterntainment content (YouTube, Reddit, Facebook, Cornhub), and although Google will have this content indexed and ready for its users, this is a rather basic application of the search engine in contrast to what it can really be used for.
+
+For example, we may use operators from programming languages to enhance or decrease our search results - or even perform arithmetic!
+
+If we wanted to for example, narrow down our search query, we could use quotation marks. Google will interpret everything in between as **exact** and only return the results of the **exact** query provided. This allows us to perform an exact search without the need to filter out useless information.
+
+To be continued...
