@@ -132,6 +132,30 @@ As previously discussed, Google has a lot of websites crawled and indexed. Most 
 
 For example, we may use operators from programming languages to enhance or decrease our search results - or even perform arithmetic!
 
-If we wanted to for example, narrow down our search query, we could use quotation marks. Google will interpret everything in between as **exact** and only return the results of the **exact** query provided. This allows us to perform an exact search without the need to filter out useless information.
+If we wanted to for example, narrow down our search query, we could use quotation marks as such: `Really "acurate" search`. Google will interpret everything in between as **exact** and only return the results of the **exact** query provided. This allows us to perform an exact search without the need to filter out useless information.
 
-To be continued...
+##### Refining Queries
+
+By using specific terms, we can apply filters when searching within our engine. For example, let's say we want to buy drone components from a certain website, our first instinct is to search for the websites name, but in this case we're actually given the definition of drone racing:
+
+![image](https://github.com/xaviermontane/THM/assets/101309588/af1a20b3-0170-47c8-b981-41f5ddc74be8)
+
+**So how do we find the site we're looking for without mindless scrolling?**
+
+Well, to optimize our search, we can simply apply the keyword "site". By doing so, we're able to retrieve the exact website we were looking for within the first search.
+
+![image](https://github.com/xaviermontane/THM/assets/101309588/576dd566-d47f-4a5a-b7cf-d5261733de02)
+
+##### So What Makes "Google Dorking" so Appealing?
+
+The most important aspect is that it's completely legal, meaning we can perform this type of search at any time. The other reason is that it's all indexed, publicly available information. However, what you do with this information is where the topic of legality comes in to play...
+
+A few common terms we can search for and combine include:
+|  Term  | Action |
+| --------- | -------- |
+| filetype: | Search for a file by its extension (e.g. PDF) |
+| cache: | View Google's Cached version of a specified URL |
+| intitle: | The specified phrase MUST appear in the title of the page |
+
+For example, let's say we wanted to use Google to search for all PDFs on BBC.co.uk. In this case, we could use the following search query: `site:bbc.co.uk filetype:pdf`.
+Through the use of creative search queries such as this, we can refine our search and find files that would've taken a considerably longer amount of time to find. Oftentimes, people publish sensitive information on the web, and through Google Dorking, we can access these valuable files. This is what truly makes Google Dorking so powerful.
