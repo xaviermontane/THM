@@ -44,3 +44,17 @@ The first phase of the _Hacker Methodology_ is Reconnaissance. Reconnaissance is
 For the sake of learning we'll act as if we're trying to hack into Tesla, which was actually hacked in March of 2023 winning the hackers $100,000 and the Model 3 that they managed to compromise.
 
 As discussed previously in our [Google Dorking](THM/Writeups/01-Introduction/GoogleDorking.md) lesson, Google is an incredibly useful tool. With the help of our search engine we can access sites such as [Wikipedia](https://en.wikipedia.org/wiki/Tesla,_Inc.) to understand the companies history, then maybe we can take a look into their socials to discover new releases which may contain unpatched vulnerabilities, or even take a look at their [Linkedin](https://www.linkedin.com/company/tesla-motors/) to understand the company's organizational structure.
+
+> You might think hackers use special tools to conduct research (and in some cases that is true), but overall they use simple tools like these to conduct research.
+
+Reconnaissance typically entails conducting research about your target using publicly accessible resources such as Google. Despite its simplicity, reconnaissance is the single most crucial phase of a penetration test.
+
+There are some specialized tools that we can utilize but for now, it's good to know the following tools:
+- Google (specifically Google Dorking)
+- Wikipedia
+- PeopleFinder.com
+- who.is
+- sublist3r
+- hunter.io
+- builtwith.com
+- wappalyzer
