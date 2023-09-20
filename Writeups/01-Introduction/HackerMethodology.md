@@ -1,4 +1,4 @@
-#### The Hacker Methodology
+### The Hacker Methodology
 
 Congratulations on making it this far! If you're enjoying the course so far I'd appreciate if you stared the repo in order to stay tuned on new writeups.
 <br><br>
@@ -34,3 +34,13 @@ While we might assume that hackers do anything they want, experienced hackers an
 4. Privilege Escalation
 5. Covering Tracks
 6. Reporting
+
+---
+
+### Reconnaissance
+
+The first phase of the _Hacker Methodology_ is Reconnaissance. Reconnaissance is all about collecting information about your target, this makes it the easiest step as its more akin to conducting qualitative research. Generally speaking, during reconnaissance we never interact with the target(s) or system(s).
+<br><br>
+For the sake of learning we'll act as if we're trying to hack into Tesla, which was actually hacked in March of 2023 winning the hackers $100,000 and the Model 3 that they managed to compromise.
+
+As discussed previously in our [Google Dorking](THM/Writeups/01-Introduction/GoogleDorking.md) lesson, Google is an incredibly useful tool. With the help of our search engine we can access sites such as [Wikipedia](https://en.wikipedia.org/wiki/Tesla,_Inc.) to understand the companies history, then maybe we can take a look into their socials to discover new releases which may contain unpatched vulnerabilities, or even take a look at their [Linkedin](https://www.linkedin.com/company/tesla-motors/) to understand the company's organizational structure.
