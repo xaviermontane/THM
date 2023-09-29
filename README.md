@@ -11,37 +11,35 @@ Welcome to F0RTY's TryHackMe repository! This collection of writeups is designed
 
 ## Introduction
 
-TryHackMe is a platform that offers a wide range of cybersecurity challenges and rooms for individuals to learn and practice their skills. This repository contains detailed writeups that explain the methodology, tools, and steps used to solve these challenges. Each writeup provides valuable insights into the world of ethical hacking and penetration testing.
+TryHackMe is a platform that offers a wide range of cybersecurity challenges and rooms for individuals to learn and practice their skills. This repository contains a cybersecurity path followed by a list of detailed writeups that explain the methodology, tools, and steps used to better understand the processes within the field. The path can be found in the [index](Index/Pathway.md) of the repository and provides a clear structure of the path to different rooms and their writeups which give a great insight into the world of ethical hacking and penetration testing.
 
 ## Writeup Structure
 
 Each writeup in this repository follows a structured format to ensure clarity and consistency:
 
-1. **Challenge Information**: A brief introduction to the challenge or room, including its name, description, and difficulty level.
+1. **Challenge Information**: A brief introduction to the challenge or room, including its name and description.
 
 2. **Objective**: An explanation of the primary goal or objective of the challenge.
 
 3. **Tools Used**: A list of tools and software used during the challenge.
 
-4. **Methodology**: Step-by-step instructions on how to approach and solve the challenge, including any potential pitfalls or challenges encountered.
+4. **Methodology**: Step-by-step instructions on how to approach and understand the challenge, including any potential challenges encountered.
 
-5. **Solution**: The final solution to the challenge, along with explanations of key findings or techniques used.
+5. **Lessons Learned**: A sumary discussing the key takeaways and lessons learned from completing the challenge.
 
-6. **Lessons Learned**: A section discussing the key takeaways and lessons learned from completing the challenge.
+6. **Additional Resources**: Links to external resources, blog posts, or documentation that can provide further insights into the topic.
 
-7. **Additional Resources**: Links to external resources, blog posts, or documentation that can provide further insights into the topic.
-
-8. **Contributors**: Credits to the authors and contributors who created the writeup.
+_7. **Contributors**:c In the case of contribution, credits to the authors and contributors who created the writeup._
 
 ## Contributing
 
-We encourage contributions to this repository to help expand the collection of writeups and provide a valuable resource for the cybersecurity community. If you have a writeup for a TryHackMe challenge or room, follow these steps to contribute:
+We encourage contributions to this repository to help expand the collection of writeups and provide a valuable resource for the cybersecurity community. If you have a writeup for a THM challenge or room, follow these steps to contribute:
 
 1. Fork this repository to your own GitHub account.
 
 2. Create a new branch with a descriptive name for your writeup.
 
-3. Write your detailed writeup following the provided structure.
+3. Write your writeup following the provided structure.
 
 4. Create a pull request to submit your writeup for review.
 
